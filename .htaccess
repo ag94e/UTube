@@ -1,0 +1,22 @@
+#Regla para evitar .php en las urls
+
+#Options -Indexes
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(,*)$ $1.php
+
+# Inicio General
+RewriteRule ^UTube$ view/login.php [L]
+DirectoryIndex view/login.php
+
+## Controllers
+RewriteRule ^login_controller$ controller/controller_login.php [L]
+RewriteRule ^logout_controller$ controller/logout_controller.php [L]
+RewriteRule ^home_controller$ controller/home_controller.php [L]
+RewriteRule ^upload_video_controller$ controller/upload_video_controller.php [L]
+
+## Views
+RewriteRule ^home_view$ view/home.php [L]
+RewriteRule ^edit_video$ view/edit_video.php [L]
