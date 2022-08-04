@@ -14,6 +14,8 @@ if (isset($_SESSION['name'])){
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/toastr.min.css">
+    <!-- Manifest-->
+    <link rel="manifest" href="manifest.json" />
     <title>Login</title>
 </head>
 
